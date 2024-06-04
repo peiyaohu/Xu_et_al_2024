@@ -1,0 +1,12 @@
+{
+    "salmon_version": "1.4.0",
+    "index": "/media/kabinxie/Work2022/NIP_ncbi_dataset/data/GCF_001433935.1/rna_index",
+    "libType": "A",
+    "mates1": "rawdata/kit_microbiota1_FP200009168_L01_394_1.fq.gz",
+    "mates2": "rawdata/kit_microbiota1_FP200009168_L01_394_2.fq.gz",
+    "threads": "6",
+    "validateMappings": [],
+    "seqBias": [],
+    "output": "quants_salmon_NCBIref/kit_microbiota1_FP200009168_L01_394_quant",
+    "auxDir": "aux_info"
+}

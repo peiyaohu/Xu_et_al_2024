@@ -1,0 +1,22 @@
+{
+    "read_files": "[ rawdata/fls2_microbiota2_FP200009168_L01_401_1.fq.gz, rawdata/fls2_microbiota2_FP200009168_L01_401_2.fq.gz]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 68869456,
+    "num_assigned_fragments": 68869456,
+    "num_frags_with_concordant_consistent_mappings": 63621241,
+    "num_frags_with_inconsistent_or_orphan_mappings": 5523162,
+    "strand_mapping_bias": 0.5259555531147215,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 33461945,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 30159296,
+    "SF": 3565750,
+    "SR": 1957412,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

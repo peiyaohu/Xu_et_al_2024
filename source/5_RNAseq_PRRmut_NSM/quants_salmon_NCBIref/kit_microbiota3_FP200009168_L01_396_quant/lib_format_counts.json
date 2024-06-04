@@ -1,0 +1,22 @@
+{
+    "read_files": "[ rawdata/kit_microbiota3_FP200009168_L01_396_1.fq.gz, rawdata/kit_microbiota3_FP200009168_L01_396_2.fq.gz]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 56690795,
+    "num_assigned_fragments": 56690795,
+    "num_frags_with_concordant_consistent_mappings": 52360392,
+    "num_frags_with_inconsistent_or_orphan_mappings": 4631746,
+    "strand_mapping_bias": 0.5253011474780402,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 27504974,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 24855418,
+    "SF": 3013387,
+    "SR": 1618359,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

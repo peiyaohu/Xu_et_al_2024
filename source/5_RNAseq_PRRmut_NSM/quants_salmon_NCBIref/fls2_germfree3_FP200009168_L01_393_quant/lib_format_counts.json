@@ -1,0 +1,22 @@
+{
+    "read_files": "[ rawdata/fls2_germfree3_FP200009168_L01_393_1.fq.gz, rawdata/fls2_germfree3_FP200009168_L01_393_2.fq.gz]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 49964910,
+    "num_assigned_fragments": 49964910,
+    "num_frags_with_concordant_consistent_mappings": 46428195,
+    "num_frags_with_inconsistent_or_orphan_mappings": 3898619,
+    "strand_mapping_bias": 0.5305833879606993,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 24634029,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 21794166,
+    "SF": 2392619,
+    "SR": 1506000,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}

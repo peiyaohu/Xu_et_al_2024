@@ -1,0 +1,12 @@
+{
+    "salmon_version": "1.4.0",
+    "index": "/media/kabinxie/Work2022/NIP_ncbi_dataset/data/GCF_001433935.1/rna_index",
+    "libType": "A",
+    "mates1": "rawdata/kit_germfree4_FP200009168_L01_386_1.fq.gz",
+    "mates2": "rawdata/kit_germfree4_FP200009168_L01_386_2.fq.gz",
+    "threads": "6",
+    "validateMappings": [],
+    "seqBias": [],
+    "output": "quants_salmon_NCBIref/kit_germfree4_FP200009168_L01_386_quant",
+    "auxDir": "aux_info"
+}

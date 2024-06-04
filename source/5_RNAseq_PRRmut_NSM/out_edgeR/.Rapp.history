@@ -1,0 +1,10 @@
+load("/Users/hupeiyao/Documents/Research/LabMember/xjw/RNA-seq/out_edgeR/20240301.RData")
+load("/Users/hupeiyao/Documents/Research/LabMember/xjw/Publish/DataAvailibility/Code/source/5_RNAseq_PRRmut_NSM/out_edgeR/20240510.RData")
+sample
+samples
+write.tabe(samples, "./samples.txt", sep="\t")
+write.table(samples, "./samples.txt", sep="\t")
+write.csv(samples, "./samples.txt", sep=",")
+library(base)
+write.csv(samples, "./samples.txt", sep=",")
+samples

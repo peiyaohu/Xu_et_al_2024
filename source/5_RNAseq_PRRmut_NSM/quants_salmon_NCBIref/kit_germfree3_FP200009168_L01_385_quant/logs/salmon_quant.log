@@ -1,0 +1,67 @@
+[2024-02-27 17:33:54.230] [jointLog] [info] setting maxHashResizeThreads to 6
+[2024-02-27 17:33:54.230] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2024-02-27 17:33:54.230] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2024-02-27 17:33:54.230] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
+[2024-02-27 17:33:54.230] [jointLog] [info] parsing read library format
+[2024-02-27 17:33:54.230] [jointLog] [info] There is 1 library.
+[2024-02-27 17:33:54.281] [jointLog] [info] Loading pufferfish index
+[2024-02-27 17:33:54.281] [jointLog] [info] Loading dense pufferfish index.
+[2024-02-27 17:33:54.664] [jointLog] [info] done
+[2024-02-27 17:33:54.664] [jointLog] [info] Index contained 53,129 targets
+[2024-02-27 17:33:54.822] [jointLog] [info] Number of decoys : 0
+[2024-02-27 17:33:55.127] [jointLog] [info] Automatically detected most likely library type as IU
+
+[2024-02-27 17:37:03.588] [jointLog] [info] Computed 205,962 rich equivalence classes for further processing
+[2024-02-27 17:37:03.588] [jointLog] [info] Counted 47,996,905 total reads in the equivalence classes 
+[2024-02-27 17:37:03.592] [jointLog] [info] Number of mappings discarded because of alignment score : 10,185,943
+[2024-02-27 17:37:03.592] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 4,226,754
+[2024-02-27 17:37:03.592] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 0
+[2024-02-27 17:37:03.592] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 644,987
+[2024-02-27 17:37:03.592] [jointLog] [info] Mapping rate = 88.0616%
+
+[2024-02-27 17:37:03.592] [jointLog] [info] finished quantifyLibrary()
+[2024-02-27 17:37:03.610] [jointLog] [info] Starting optimizer
+[2024-02-27 17:37:03.645] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2024-02-27 17:37:03.650] [jointLog] [info] iteration = 0 | max rel diff. = 3254.03
+[2024-02-27 17:37:03.697] [jointLog] [info] iteration 11, adjusting effective lengths to account for biases
+[2024-02-27 17:37:03.589] [fileLog] [info] 
+At end of round 0
+==================
+Observed 54503779 total fragments (54503779 in most recent round)
+
+[2024-02-27 17:37:05.003] [jointLog] [info] Computed expected counts (for bias correction)
+[2024-02-27 17:37:05.004] [jointLog] [info] processed bias for 0.0% of the transcripts
+[2024-02-27 17:37:05.569] [jointLog] [info] processed bias for 10.0% of the transcripts
+[2024-02-27 17:37:06.168] [jointLog] [info] processed bias for 20.0% of the transcripts
+[2024-02-27 17:37:06.717] [jointLog] [info] processed bias for 30.0% of the transcripts
+[2024-02-27 17:37:07.232] [jointLog] [info] processed bias for 40.0% of the transcripts
+[2024-02-27 17:37:07.817] [jointLog] [info] processed bias for 50.0% of the transcripts
+[2024-02-27 17:37:08.401] [jointLog] [info] processed bias for 60.0% of the transcripts
+[2024-02-27 17:37:08.947] [jointLog] [info] processed bias for 70.0% of the transcripts
+[2024-02-27 17:37:09.504] [jointLog] [info] processed bias for 80.0% of the transcripts
+[2024-02-27 17:37:10.072] [jointLog] [info] processed bias for 90.0% of the transcripts
+[2024-02-27 17:37:10.644] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2024-02-27 17:37:10.645] [jointLog] [info] processed bias for 100.0% of the transcripts
+[2024-02-27 17:37:11.069] [jointLog] [info] iteration = 100 | max rel diff. = 12.4981
+[2024-02-27 17:37:11.547] [jointLog] [info] iteration = 200 | max rel diff. = 9.52296
+[2024-02-27 17:37:12.034] [jointLog] [info] iteration = 300 | max rel diff. = 15.5015
+[2024-02-27 17:37:12.516] [jointLog] [info] iteration = 400 | max rel diff. = 0.51664
+[2024-02-27 17:37:13.000] [jointLog] [info] iteration = 500 | max rel diff. = 0.268075
+[2024-02-27 17:37:13.476] [jointLog] [info] iteration = 600 | max rel diff. = 0.256413
+[2024-02-27 17:37:13.951] [jointLog] [info] iteration = 700 | max rel diff. = 1.33327
+[2024-02-27 17:37:14.437] [jointLog] [info] iteration = 800 | max rel diff. = 0.101207
+[2024-02-27 17:37:14.924] [jointLog] [info] iteration = 900 | max rel diff. = 0.017081
+[2024-02-27 17:37:15.410] [jointLog] [info] iteration = 1,000 | max rel diff. = 0.568039
+[2024-02-27 17:37:15.904] [jointLog] [info] iteration = 1,100 | max rel diff. = 0.0702972
+[2024-02-27 17:37:16.387] [jointLog] [info] iteration = 1,200 | max rel diff. = 0.20883
+[2024-02-27 17:37:16.872] [jointLog] [info] iteration = 1,300 | max rel diff. = 0.124085
+[2024-02-27 17:37:17.356] [jointLog] [info] iteration = 1,400 | max rel diff. = 0.0193121
+[2024-02-27 17:37:17.839] [jointLog] [info] iteration = 1,500 | max rel diff. = 0.0414212
+[2024-02-27 17:37:18.260] [jointLog] [info] iteration = 1,587 | max rel diff. = 0.00727858
+[2024-02-27 17:37:18.261] [jointLog] [info] Finished optimizer
+[2024-02-27 17:37:18.261] [jointLog] [info] writing output 
+
+[2024-02-27 17:37:18.348] [jointLog] [warning] NOTE: Read Lib [[ rawdata/kit_germfree3_FP200009168_L01_385_1.fq.gz, rawdata/kit_germfree3_FP200009168_L01_385_2.fq.gz]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: quants_salmon_NCBIref/kit_germfree3_FP200009168_L01_385_quant/lib_format_counts.json for details
+

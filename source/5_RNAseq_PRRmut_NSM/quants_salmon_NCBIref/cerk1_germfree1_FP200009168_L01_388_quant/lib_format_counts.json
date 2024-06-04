@@ -1,0 +1,22 @@
+{
+    "read_files": "[ rawdata/cerk1_germfree1_FP200009168_L01_388_1.fq.gz, rawdata/cerk1_germfree1_FP200009168_L01_388_2.fq.gz]",
+    "expected_format": "IU",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 60606190,
+    "num_assigned_fragments": 60606190,
+    "num_frags_with_concordant_consistent_mappings": 56076569,
+    "num_frags_with_inconsistent_or_orphan_mappings": 4789934,
+    "strand_mapping_bias": 0.5278608967677748,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 29600628,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 26475941,
+    "SF": 3021961,
+    "SR": 1767973,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}
