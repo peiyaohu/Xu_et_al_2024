@@ -1,0 +1,11 @@
+﻿SampleID,Cultivar,Treatment,Batch
+kit_germfree1,Kitaake,germfree,Batch1
+kit_germfree3,Kitaake,germfree,Batch1
+kit_germfree4,Kitaake,germfree,Batch1
+kit_microbiota1,Kitaake,microbiota,Batch1
+kit_microbiota2,Kitaake,microbiota,Batch1
+kit_microbiota3,Kitaake,microbiota,Batch1
+MH63_germfree2,MH63,germfree,Batch2
+MH63_germfree3,MH63,germfree,Batch2
+MH63_microbiota1,MH63,microbiota,Batch2
+MH63_microbiota3,MH63,microbiota,Batch2
