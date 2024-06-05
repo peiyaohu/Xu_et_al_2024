@@ -29,6 +29,6 @@ Tables corresponding to the article's figures.
 Figures generated using [scripts](###script) .
 
 ### Additional data
-The data from the execution of the above R script is stored in `.RData` format, with the link available on [Figshare](https://figshare.com/articles/dataset/_/25968343).
+The data from the execution of the above R script is stored in `.RData` format, with the link available on [Figshare]([https://figshare.com/articles/dataset/_/25968343](https://doi.org/10.6084/m9.figshare.25968343)).
 
 > Note: The rice variety "Kitaake", written as "Kit" "kit," or "KIT" occasionally. Additionally, in filenames (`Table/` or `Figure/`), "Sup" indicates supplementary tables or figures that are not directly related to the main images or figures.
