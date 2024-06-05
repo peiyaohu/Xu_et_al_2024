@@ -7,8 +7,8 @@ These scripts are for manuscript "Cultivar preference and immune RLK receptors g
 ### script
 
 - `1_16S_MH63_NSM_inoculation.R`: 16S rRNA sequencing of MH63 inoculated with NSM (natural soil microbiota) in 2 soil types.
-- `2_16S_MH63_SynCom11.R`: 16S rRNA sequencing of MH63 inoculated with SynCom11.
-- `3_16S_PRRmut_NSM.R`: 16S rRNA sequencing of PRR mutant (*osfls2*, *oscerk1*) inoculated with or without NSM.
+- `2_16S_MH63_SynCom11.R`: 16S rRNA gene sequencing of MH63 inoculated with SynCom11.
+- `3_16S_PRRmut_NSM.R`: 16S rRNA gene sequencing of PRR mutant (*osfls2*, *oscerk1*) inoculated with or without NSM.
 - `4_RNAseq_Kit_and_MH63_NSM.R`: Transcriptome of 2 rice cultivars (KIT and MH63) inoculated with or without NSM.
 - `5_RNAseq_PRRmut_NSM.R`: Transcriptome of PRR mutant (*osfls2*, *oscerk1*) inoculated with or without NSM.
 - `save_pheatmap.R`: A function for saving heatmap.
