@@ -26,7 +26,7 @@ Tables corresponding to the article's figures.
 
 ### Figure
 
-Figures generated using [scripts](### script) .
+Figures generated using [scripts](###script) .
 
 ### Additional data
 The data from the execution of the above R script is stored in `.RData` format, with the link available on [Figshare](https://figshare.com/articles/dataset/_/25968343).
