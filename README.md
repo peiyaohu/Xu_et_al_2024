@@ -7,7 +7,7 @@ This repository contains key scripts used for the study:
 
 #### Figure2 and FigureS4
 
-[xjw_iMeta_Figure2.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/xjw_iMeta_Figure2.R)
+[xjw_iMeta_Figure2.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/xjw_iMeta_Figure2.R)
 
 #### Figure5: 
 
