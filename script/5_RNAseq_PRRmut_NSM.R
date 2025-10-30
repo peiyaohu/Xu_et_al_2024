@@ -417,3 +417,129 @@ print(combined_plot)
 ggsave("./Fig5d.BiNGO_point_GOn_thred3.pdf", width=7, height=9)
 
 save.image("5_RNAseq_PRRmut_NSM.RData")
+
+
+######################### 20250724 ###############
+
+### 2. Heatmaps (sup Fig5c) #########
+length(unique(sort(unlist(cerk1_DEG_ID))))  # 460 genes associated to cerk1
+cerk1_DEG_cpm<-cpms[unique(sort(unlist(cerk1_DEG_ID))),]
+p<-pheatmap(cerk1_DEG_cpm[,1:12],show_rownames = F, scale="row",main = "CPM of DEGs associated to cerk1");
+
+
+pdf(file=file.path(OUT_DIR,"Fig5c_Sup_cerk1_cpm_heatmap.pdf"),width=4,height = 10)
+p
+dev.off()
+## Combined the logFC and pvalue together
+## Check the row names in different datasets
+table(rownames(res_cerkvsKit_germfree$table)==rownames(res_cerkvsKit_microbiota$table));
+
+#Extract logFC values to a dataframe and a file
+
+logfc_1<- res_cerkvsKit_germfree$table
+logfc_2<- res_cerkvsKit_microbiota$table
+logfc_3<- res_con_cerk_x_microbiota$table
+logfc_4<- res_Kit.MvsG$table
+cpm_zscore<- cpms %>% t() %>% scale() %>% t() %>%as.data.frame() %>%
+  select(starts_with("cerk1"), starts_with("kit"))
+names(cpm_zscore)<- paste(names(cpm_zscore), "_cpm_zscore", sep="")
+
+
+colnames(logfc_1)<- paste0("cerk1_G_", colnames(logfc_1))
+colnames(logfc_2)<- paste0("cerk1_M_", colnames(logfc_2))
+colnames(logfc_3)<- paste0("cerk1_GxM_", colnames(logfc_3))
+colnames(logfc_4)<- paste0("Kit_", colnames(logfc_4))
+
+cerk1_stat<-cbind(logfc_3,logfc_2,logfc_1,logfc_4,cpm_zscore)[unique(sort(unlist(cerk1_DEG_ID))),] %>%
+  arrange(cerk1_GxM_logFC)#2090 degs
+library(circlize)
+cerk1_stat %>% 
+  select(ends_with("logFC")) %>%summary
+cerk1_stat %>% 
+  select(ends_with("_cpm_zscore")) %>%View()
+col_logFC<- colorRamp2(c(-12,-6,-2,-1,0,1,2,6,12), colorRampPalette(rev(brewer.pal(n=10, name="BrBG")))(9))
+col_logCPM<- colorRamp2(c(-12,-6,-2,-1,0,1,2,6,12), colorRampPalette(rev(brewer.pal(n=10, name="RdBu")))(9))
+
+
+ht1<- cerk1_stat %>% 
+  select(ends_with("logFC")) %>% 
+  as.matrix() %>%
+  Heatmap(name= "logFC",cluster_rows=F, cluster_columns = F,
+          col= col_logFC)
+
+ht2<- cerk1_stat %>% 
+  select(ends_with("_cpm_zscore")) %>%
+  as.matrix() %>%
+  Heatmap(name= "CPM_zscore",cluster_rows=F, cluster_columns = F,
+          col= col_logCPM)
+
+pdf(paste0(OUT_DIR,"Fig5c.ht_cerk1_degs.pdf"))
+ht1+ht2
+dev.off()        
+
+
+## BiNGO
+library(tidyverse)
+cerk1_stat %>% rownames_to_column("Symbol") %>% write.csv("cerk1_460_genes.csv", row.names = F, quote=F)
+
+#### 20250725 modify ##
+cerk1_GxM_id<- c(cerk1_DEG_ID$cerk1_x_m_up,cerk1_DEG_ID$cerk1_x_m_down ) # 2 genes
+cerk1_G_id<- c(cerk1_DEG_ID$cerk1_germfree_up, cerk1_DEG_ID$cerk1_germfree_down) # 143 genes
+cerk1_M_id<- c(cerk1_DEG_ID$cerk1_microbiota_up, cerk1_DEG_ID$cerk1_microbiota_down) # 426 genes
+
+cerk1_deg_for_go<- data.frame(group = c(rep("GxM", 2), rep("G", 143),rep("M", 426)),
+                              gene= c(cerk1_GxM_id, cerk1_G_id,cerk1_M_id )
+)
+write.csv(cerk1_deg_for_go, "../20250724/Table.cerk1_deg_for_go.csv")
+
+
+
+
+
+
+cerk1_bingo_res<- readxl::read_excel("../20250724/cerk1_group_BiNGO.xlsx")
+
+pattern <- "response"
+plotdata1 <- cerk1_bingo_res %>% 
+  #filter(GeneNo >= 0) %>%
+  filter(str_detect(GO, pattern))
+count_data <- plotdata1 %>% count(GO, name = "n")
+merged_data <- plotdata1 %>% inner_join(count_data, by = "GO")
+
+p1<- merged_data %>% 
+  select(Group, GeneNo, GO, Corrected_pval, n) %>% 
+  # filter(GeneNo > 15 ) %>%
+  filter(Group %in% c("cerk1_G", "cerk1_M")) %>%
+  mutate(Group=factor(Group, levels=c("cerk1_G", "cerk1_M"))) %>%
+  ggplot(aes(x=Group, y=GO))+
+  geom_point(aes(size=GeneNo, color=Corrected_pval))+
+  theme_bw()+
+  scale_color_gradient(high = "#D8BFD8", low = "#6C2E53")+
+  theme(axis.text = element_text(color="black",size=12),
+        axis.text.x = element_text(angle = 90, hjust=1))+
+  labs(title = "response",x="", y="GO term")
+ggsave("../20250724/Fig5d.BiNGO_cerk1_GO_reponse.pdf", width=7, height=4)
+
+
+count_data2 <- cerk1_bingo_res %>% count(GO, name = "n")
+merged_data2 <- cerk1_bingo_res %>% inner_join(count_data2, by = "GO")
+
+p2<- merged_data2 %>% 
+  select(Group, GeneNo, GO, Corrected_pval, n) %>% 
+  # filter(GeneNo > 15 ) %>%
+  filter(Group %in% c("cerk1_G", "cerk1_M")) %>%
+  mutate(Group=factor(Group, levels=c("cerk1_G", "cerk1_M"))) %>%
+  ggplot(aes(x=Group, y=GO))+
+  geom_point(aes(size=GeneNo, color=Corrected_pval))+
+  theme_bw()+
+  scale_color_gradient(high = "#D8BFD8", low = "#6C2E53")+
+  theme(axis.text = element_text(color="black",size=12),
+        axis.text.x = element_text(angle = 90, hjust=1))+
+  labs(title = "all",x="", y="GO term")
+ggsave("../20250724/Fig5d.BiNGO_cerk1_GO_all.pdf", width=13, height=9)
+
+library(cowplot)
+combined_plot <- plot_grid(p1 , p2 ,ncol = 1, align = "v", rel_heights  = c(5, 6))
+print(combined_plot)
+ggsave("../20250724/Fig5d.BiNGO_cerk1_GOn.pdf", width=13, height=9)
+
