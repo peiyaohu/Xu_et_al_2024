@@ -33,4 +33,4 @@ This repository contains key scripts used for the study:
 
 ### Contact:
 
-hupy@webmail.hzau.edu.cn
+Peiyao Hu, hupy@webmail.hzau.edu.cn
