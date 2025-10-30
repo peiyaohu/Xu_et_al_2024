@@ -7,11 +7,11 @@ This repository contains key scripts used for the study:
 
 #### Figure2 and FigureS4
 
-[xjw_iMeta_Figure2.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/xjw_iMeta_Figure2.R)
+[xjw_iMeta_Figure2.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/xjw_iMeta_Figure2.R)
 
 #### Figure5: 
 
-script/[3_16S_PRRmut_NSM.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/3_16S_PRRmut_NSM.R)
+[3_16S_PRRmut_NSM.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/3_16S_PRRmut_NSM.R)
 
  
 
@@ -19,9 +19,9 @@ script/[3_16S_PRRmut_NSM.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/
 
 #### Figure6, Figure S12, Figure S13: 
 
-script/[4_RNAseq_Kit_and_MH63_NSM.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/4_RNAseq_Kit_and_MH63_NSM.R)
+[4_RNAseq_Kit_and_MH63_NSM.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/4_RNAseq_Kit_and_MH63_NSM.R)
 
-script/[5_RNAseq_PRRmut_NSM.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/5_RNAseq_PRRmut_NSM.R)
+[5_RNAseq_PRRmut_NSM.R](https://github.com/peiyaohu/Xu_et_al_2024/blob/main/script/5_RNAseq_PRRmut_NSM.R)
 
 ---
 
